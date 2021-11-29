@@ -1,7 +1,7 @@
 import boto3
 import sys
 
-client = boto3.client('ec2', region_name =Region, aws_access_key_id=Accesskey, aws_secret_access_key =Secretkey)
+client = boto3.client('ec2', region_name = Region, aws_access_key_id= Accesskey, aws_secret_access_key = Secretkey)
 
 mohanec2 = client.describe_instances()
 for mohan1 in mohanec2['Reservations']:
