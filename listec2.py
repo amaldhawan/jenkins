@@ -1,6 +1,10 @@
 import boto3
 import sys
 
+Region = sys.argv[1]
+Accesskey = sys.argv[2]
+Secretkey = sys.argv[3]
+
 client = boto3.client('ec2', region_name = Region, aws_access_key_id= Accesskey, aws_secret_access_key = Secretkey)
 
 mohanec2 = client.describe_instances()
